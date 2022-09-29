@@ -6,24 +6,17 @@ Created on Sun Apr 10 15:04:06 2022
 @author: leeh43
 """
 
-from typing import Sequence, Tuple, Union
+from typing import Tuple
 
 import torch.nn as nn
-import torch
 
 from monai.networks.blocks.dynunet_block import UnetOutBlock
-from monai.networks.blocks.unetr_block import UnetrBasicBlock, UnetrPrUpBlock, UnetrUpBlock
-from monai.networks.layers.factories import Conv, Norm, Pool
-from monai.networks.layers.utils import get_pool_layer
-from monai.utils.module import look_up_option
-from functools import partial
-from typing import Any, Callable, List, Optional, Type, Union
-from monai.networks.nets.vit import ViT
-from monai.utils import ensure_tuple_rep
+from monai.networks.blocks.unetr_block import UnetrBasicBlock, UnetrUpBlock
+from typing import Union
 import torch.nn.functional as F
 from lib.utils.tools.logger import Logger as Log
 from lib.models.tools.module_helper import ModuleHelper
-from convxnet import Convxnet
+from networks.UXNet_3D.uxnet_encoder import uxnet_conv
 
 class ProjectionHead(nn.Module):
     def __init__(self, dim_in, proj_dim=256, proj='convmlp', bn_type='torchbn'):
@@ -168,7 +161,7 @@ class UXNET(nn.Module):
         #     dropout_rate=dropout_rate,
         #     spatial_dims=spatial_dims,
         # )
-        self.convxnet = Convxnet(
+        self.uxnet_3d = uxnet_conv(
             in_chans= self.in_chans,
             depths=self.depths,
             dims=self.feat_size,
@@ -280,7 +273,7 @@ class UXNET(nn.Module):
         return x
     
     def forward(self, x_in):
-        outs = self.convxnet(x_in)
+        outs = self.uxnet_3d(x_in)
         # print(outs[0].size())
         # print(outs[1].size())
         # print(outs[2].size())
