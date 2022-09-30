@@ -46,13 +46,12 @@ class ux_block(nn.Module):
 
     def __init__(self, dim, drop_path=0., layer_scale_init_value=1e-6):
         super().__init__()
-        # self.debug_conv = nn.Conv3d(48, 48, kernel_size=7, padding=3, groups=48)
-        self.dwconv = nn.Conv3d(dim, dim, kernel_size=7, padding=3, groups=dim)
+        self.dwconv = nn.Conv3d(dim, dim, kernel_size=13, padding=6, groups=dim)
         self.norm = LayerNorm(dim, eps=1e-6)
         # self.pwconv1 = nn.Linear(dim, 4 * dim)
         self.pwconv1 = nn.Conv3d(dim, 4 * dim, kernel_size=1)
         self.act = nn.GELU()
-        self.pwconv2 = nn.Linear(4 * dim, dim)
+        # self.pwconv2 = nn.Linear(4 * dim, dim)
         self.pwconv2 = nn.Conv3d(4 * dim, dim, kernel_size=1)
         self.gamma = nn.Parameter(layer_scale_init_value * torch.ones((dim)),
                                   requires_grad=True) if layer_scale_init_value > 0 else None
