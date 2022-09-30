@@ -10,7 +10,7 @@ Vanderbilt University
 ---
 
 <p align="center">
-<img src="" width=100% height=100% 
+<img src="screenshots/Figure_1.pdf" width=100% height=100% 
 class="center">
 </p>
 
