@@ -1,11 +1,11 @@
-### [3D UX-Net: A Large Kernel Volumetric ConvNet Modernizing Hierarchical Transformer for Medical Image Segmentation]
+### [3D UX-Net: A Large Kernel Volumetric ConvNet Modernizing Hierarchical Transformer for Medical Image Segmentation](https://arxiv.org/abs/2209.15076)
 
 Official Pytorch implementation of 3D UX-Net, from the following paper:
 
-[3D UX-Net: A Large Kernel Volumetric ConvNet Modernizing Hierarchical Transformer for Medical Image Segmentation]. Arxiv 2022 \
+[3D UX-Net: A Large Kernel Volumetric ConvNet Modernizing Hierarchical Transformer for Medical Image Segmentation](https://arxiv.org/abs/2209.15076). Arxiv 2022 \
 Ho Hin Lee, Shunxing Bao, [Yuankai Huo](https://hrlblab.github.io/), [Bennet A. Landman](https://my.vanderbilt.edu/masi/people/bennett-landman-ph-d/) \
-Vanderbilt University
-[[`arXiv`]]
+Vanderbilt University \
+[[`arXiv`](https://arxiv.org/abs/2209.15076)]
 
 ---
 
@@ -13,6 +13,7 @@ Vanderbilt University
 <img src="screenshots/Figure_1.png" width=100% height=40% 
 class="center">
 </p>
+
 <p align="center">
 <img src="screenshots/Figure_2.png" width=100% height=40% 
 class="center">
@@ -24,11 +25,12 @@ We propose **3D UX-Net**, a pure volumetric convolutional network to adapt hiera
  - [x] FeTA 2021, FLARE 2021 Training Code (training.md)
  - [x] AMOS 2022 Finetuning Code (finetuning.md)
  
+ (Feel free to post suggestions in issues of recommending latest proposed transformer network for comparison. Currently, the network folder is to put the current SOTA transformer. We can further add the recommended network in it for training.)
  
  <!-- ✅ ⬜️  -->
  
  ## Results 
- ##### FeTA 2021 & FLARE 2021 Trained Models (5-folds cross-validation)
+ ### FeTA 2021 & FLARE 2021 Trained Models (5-folds cross-validation)
  | Methods | resolution | #params | FLOPs | Mean Dice (FeTA2021) |  Mean Dice (FLARE2021) |
 |:---:|:---:|:---:|:---:| :---:|:---:|
 | TransBTS | 96x96x96 | 31.6M | 110.4G | 0.868 | 0.902 |
@@ -37,7 +39,7 @@ We propose **3D UX-Net**, a pure volumetric convolutional network to adapt hiera
 | SwinUNETR | 96x96x96 | 62.2M | 328.4M | 0.867 | 0.929 | 
 | 3D UX-Net | 96x96x96 | 53.0M | 639.4G | 0.874 (kernel=7) | 0.938 (kernel=13)|
 
- ##### AMOS 2022 Fine-tuned Models 
+ ### AMOS 2022 Fine-tuned Models 
  | Methods | resolution | #params | FLOPs | Mean Dice (AMOS2022) |
 |:---:|:---:|:---:|:---:| :---:|
 | TransBTS | 96x96x96 | 31.6M | 110.4G | 0.792 |
@@ -71,7 +73,7 @@ If you find this repository helpful, please consider citing:
 @Article{lee20223DUX-Net,
   author  = {Ho Hin Lee and Shunxing Bao and Yuankai Huo and Bennet A. Landman},
   title   = {3D UX-Net: A Large Kernel Volumetric ConvNet Modernizing Hierarchical Transformer for Medical Image Segmentation]},
-  journal = {Arxiv},
+  journal = {arXiv},
   year    = {2022},
 }
 ```
