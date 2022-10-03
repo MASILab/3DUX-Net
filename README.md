@@ -50,7 +50,7 @@ We propose **3D UX-Net**, a pure volumetric convolutional network to adapt hiera
 
 <!-- ✅ ⬜️  -->
 ## Training
-Training and fine-tuning instructions are in [training.md](training.md)
+Training and fine-tuning instructions are in [TRAINING.md](TRAINING.md)
 
 <!-- ✅ ⬜️  -->
 ## Evaluation
