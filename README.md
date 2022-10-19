@@ -21,9 +21,12 @@ class="center">
 
 We propose **3D UX-Net**, a pure volumetric convolutional network to adapt hierarchical transformers behaviour (e.g. Swin Transformer) for Medical Image Segmentation with less model parameters.
 
+ ## Installation
+ Please look into the [INSTALL.md](INSTALL.md) for creating conda environment and package installation procedures.
+
  ## Training Tutorial
- - [x] FeTA 2021, FLARE 2021 Training Code (training.md)
- - [x] AMOS 2022 Finetuning Code (finetuning.md)
+ - [x] FeTA 2021, FLARE 2021 Training Code [TRAINING.md](TRAINING.md)
+ - [x] AMOS 2022 Finetuning Code [TRAINING.md](TRAINING.md)
  
  (Feel free to post suggestions in issues of recommending latest proposed transformer network for comparison. Currently, the network folder is to put the current SOTA transformer. We can further add the recommended network in it for training.)
  
@@ -50,7 +53,7 @@ We propose **3D UX-Net**, a pure volumetric convolutional network to adapt hiera
 
 <!-- ✅ ⬜️  -->
 ## Training
-Training and fine-tuning instructions are in [TRAINING.md](TRAINING.md)
+Training and fine-tuning instructions are in [TRAINING.md](TRAINING.md). Pretrained model weights will be uploaded for public usage later on.
 
 <!-- ✅ ⬜️  -->
 ## Evaluation
