@@ -39,7 +39,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu
 test_samples, out_classes = data_loader(args)
 
 test_files = [
-    {"image": image_name} for image_name in zip(test_samples['images'])
+    {"images": image_name} for image_name in zip(test_samples['images'])
 ]
 
 set_determinism(seed=0)
