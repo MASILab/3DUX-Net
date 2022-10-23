@@ -39,7 +39,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu
 test_samples, out_classes = data_loader(args)
 
 test_files = [
-    {"images": image_name} for image_name in zip(test_samples['images'])
+    {"image": image_name} for image_name in zip(test_samples['images'])
 ]
 
 set_determinism(seed=0)
@@ -100,7 +100,7 @@ model.load_state_dict(torch.load(args.trained_weights))
 model.eval()
 with torch.no_grad():
     for i, test_data in enumerate(test_loader):
-        images = test_data["images"].to(device)
+        images = test_data["image"].to(device)
         roi_size = (96, 96, 96)
         test_data['pred'] = sliding_window_inference(
             images, roi_size, args.sw_batch_size, model, overlap=args.overlap
