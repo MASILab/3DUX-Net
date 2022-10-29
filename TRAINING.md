@@ -6,7 +6,7 @@ Please check [INSTALL.md](INSTALL.md) for installation instructions first.
 ## FeTA 2021 & FLARE 2021 Training
 3D UX-Net training on FeTA 2021 with a single GPU:
 ```
-python --root root_folder_path --output output_folder_path \
+python main_train.py --root root_folder_path --output output_folder_path \
 --dataset feta --network 3DUXNET --mode train --pretrain False \
 --batch_size 1 --crop_sample 2 --lr 0.0001 --optim AdamW --max_iter 40000 \ 
 --eval_step 500 --gpu 0 --cache_rate 1.0 --num_workers 2
@@ -14,7 +14,7 @@ python --root root_folder_path --output output_folder_path \
 
 3D UX-Net training on FLARE 2021 with a single GPU:
 ```
-python --root root_folder_path --output output_folder_path \
+python main_train.py --root root_folder_path --output output_folder_path \
 --dataset flare --network 3DUXNET --mode train --pretrain False \
 --batch_size 1 --crop_sample 2 --lr 0.0001 --optim AdamW --max_iter 40000 \ 
 --eval_step 500 --gpu 0 --cache_rate 0.2 --num_workers 2
@@ -43,7 +43,7 @@ python main_finetune.py --root root_folder_path --output output_folder_path \
 --eval_step 500 --gpu 0 --cache_rate 0.2 --num_workers 2
 ```
 - The main_finetune.py allows us to finetune on models that pretrained with different datasets, as long as we know the output classes and the network structure of the pretrained model.
-- For the training scenario in the paper, we use the best fold model in 5-fold cross-validations with FLARE 2021 as the pretrained weights for finetuning.
+- For the finetuning scenario in the paper, we use the best fold model in 5-fold cross-validations with FLARE 2021 as the pretrained weights for finetuning.
 
 ## Network Choices
 We also aim to perform benchmarking in the latest public multi-organ/tissue segmentation datasets with volumetric transformer network SOTA. This GitHub allows to perform fair comparisons for network by using same data augmentation and preprocessing. Here is the summary of the available network in our code:
