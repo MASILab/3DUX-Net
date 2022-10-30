@@ -33,14 +33,25 @@ We propose **3D UX-Net**, a pure volumetric convolutional network to adapt hiera
  <!-- ✅ ⬜️  -->
  
  ## Results 
- ### FeTA 2021 & FLARE 2021 Trained Models (5-folds cross-validation)
- | Methods | resolution | #params | FLOPs | Mean Dice (FeTA2021) |  Mean Dice (FLARE2021) |
+ ### FeTA 2021 Trained Models (5-folds cross-validation)
+ | Methods | resolution | #params | FLOPs | Mean Dice | Model
 |:---:|:---:|:---:|:---:| :---:|:---:|
-| TransBTS | 96x96x96 | 31.6M | 110.4G | 0.868 | 0.902 |
-| UNETR | 96x96x96 | 92.8M | 82.6G | 0.860 | 0.886 | 
-| nnFormer | 96x96x96 | 149.3M | 240.2G | 0.863 | 0.906 | 
-| SwinUNETR | 96x96x96 | 62.2M | 328.4G | 0.867 | 0.929 | 
-| 3D UX-Net | 96x96x96 | 53.0M | 639.4G | 0.874 (kernel=7) | 0.938 (kernel=13)|
+| TransBTS | 96x96x96 | 31.6M | 110.4G | 0.868 | |
+| UNETR | 96x96x96 | 92.8M | 82.6G | 0.860 | |
+| nnFormer | 96x96x96 | 149.3M | 240.2G | 0.863 | |
+| SwinUNETR | 96x96x96 | 62.2M | 328.4G | 0.867 | |
+| 3D UX-Net | 96x96x96 | 53.0M | 639.4G | 0.874 | [Weights](https://drive.google.com/file/d/1AqJMIM2w8OGGiN1FonmZqNoRHd2x5fTL/view?usp=share_link)
+
+### FLARE 2021 Trained Models (5-folds cross-validation)
+| Methods | resolution | #params | FLOPs | Mean Dice | Model 
+|:---:|:---:|:---:|:---:| :---:|:---:|
+| TransBTS | 96x96x96 | 31.6M | 110.4G | 0.902 | | 
+| UNETR | 96x96x96 | 92.8M | 82.6G | 0.886 | |
+| nnFormer | 96x96x96 | 149.3M | 240.2G | 0.906 | |
+| SwinUNETR | 96x96x96 | 62.2M | 328.4G | 0.929 | |
+| 3D UX-Net | 96x96x96 | 53.0M | 639.4G | 0.938 |[Weights](https://drive.google.com/file/d/1APxKmq3MuueY4KtuKAZG3vs3vPLetLaK/view?usp=share_link)
+
+
 
  ### AMOS 2022 Fine-tuned Models 
  | Methods | resolution | #params | FLOPs | Mean Dice (AMOS2022) |
