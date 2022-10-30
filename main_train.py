@@ -129,8 +129,8 @@ elif args.network == 'TransBTS':
 print('Chosen Network Architecture: {}'.format(args.network))
 
 if args.pretrain == 'True':
-    print('Pretrained weight is found! Start to load weight from: {}'.format(args.pretrained_weight))
-    model.load_state_dict(torch.load(args.pretrained_weight))
+    print('Pretrained weight is found! Start to load weight from: {}'.format(args.pretrained_weights))
+    model.load_state_dict(torch.load(args.pretrained_weights))
 
 ## Define Loss function and optimizer
 loss_function = DiceCELoss(to_onehot_y=True, softmax=True)
