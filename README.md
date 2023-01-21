@@ -2,7 +2,7 @@
 
 Official Pytorch implementation of 3D UX-Net, from the following paper:
 
-[3D UX-Net: A Large Kernel Volumetric ConvNet Modernizing Hierarchical Transformer for Medical Image Segmentation](https://arxiv.org/abs/2209.15076). Arxiv 2022 \
+[3D UX-Net: A Large Kernel Volumetric ConvNet Modernizing Hierarchical Transformer for Medical Image Segmentation](https://arxiv.org/abs/2209.15076). ICLR 2023 (Accepted) \
 Ho Hin Lee, Shunxing Bao, [Yuankai Huo](https://hrlblab.github.io/), [Bennet A. Landman](https://my.vanderbilt.edu/masi/people/bennett-landman-ph-d/) \
 Vanderbilt University \
 [[`arXiv`](https://arxiv.org/abs/2209.15076)]
