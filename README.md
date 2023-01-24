@@ -49,7 +49,7 @@ We propose **3D UX-Net**, a pure volumetric convolutional network to adapt hiera
 | UNETR | 96x96x96 | 92.8M | 82.6G | 0.886 | |
 | nnFormer | 96x96x96 | 149.3M | 240.2G | 0.906 | |
 | SwinUNETR | 96x96x96 | 62.2M | 328.4G | 0.929 | |
-| 3D UX-Net | 96x96x96 | 53.0M | 639.4G | 0.938 |[Weights](https://drive.google.com/file/d/1APxKmq3MuueY4KtuKAZG3vs3vPLetLaK/view?usp=share_link)
+| 3D UX-Net | 96x96x96 | 53.0M | 639.4G | 0.936 (latest)| [Weights](https://drive.google.com/file/d/1APxKmq3MuueY4KtuKAZG3vs3vPLetLaK/view?usp=share_link)
 
 
 
