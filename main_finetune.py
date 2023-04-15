@@ -95,7 +95,7 @@ if args.network == '3DUXNET':
     if args.pretrain:
         model = UXNET(
             in_chans=1,
-            out_chans=args.pretrain_classes,
+            out_chans=int(args.pretrain_classes),
             depths=[2, 2, 2, 2],
             feat_size=[48, 96, 192, 384],
             drop_path_rate=0,
