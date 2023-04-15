@@ -30,7 +30,7 @@ python main_train.py --root root_folder_path --output output_folder_path \
 ```
 python main_finetune.py --root root_folder_path --output output_folder_path \
 --dataset amos --network 3DUXNET --mode train --pretrain True \
---pretrained_weights path_to_pretrained_weights --pretrained classes 5 (FLARE number of classes) \
+--pretrained_weights path_to_pretrained_weights --pretrained_classes 5 \ # (--pretrained_classes 5 is FLARE number of classes)
 --batch_size 1 --crop_sample 2 --lr 0.0001 --optim AdamW --max_iter 40000 \ 
 --eval_step 500 --gpu 0 --cache_rate 0.2 --num_workers 2
 ```
