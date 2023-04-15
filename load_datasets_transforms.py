@@ -13,7 +13,6 @@ from monai.transforms import (
     LoadImaged,
     Orientationd,
     RandCropByPosNegLabeld,
-    ScaleIntensityRanged,
     KeepLargestConnectedComponentd,
     Spacingd,
     ToTensord,
@@ -28,6 +27,8 @@ from monai.transforms import (
     SaveImaged,
     Activationsd
 )
+
+from autoscale_intensity import AutoScaleIntensity
 
 import numpy as np
 from collections import OrderedDict
@@ -92,9 +93,9 @@ def data_transforms(args):
                 LoadImaged(keys=["image", "label"]),
                 AddChanneld(keys=["image", "label"]),
                 Orientationd(keys=["image", "label"], axcodes="RAS"),
-                ScaleIntensityRanged(
-                    keys=["image"], a_min=0, a_max=1000,
-                    b_min=0.0, b_max=1.0, clip=True,
+                AutoScaleIntensity(
+                    keys=["image"],
+                    b_min=0.0, b_max=1.0,
                 ),
                 CropForegroundd(keys=["image", "label"], source_key="image"),
                 RandCropByPosNegLabeld(
@@ -127,9 +128,9 @@ def data_transforms(args):
                 LoadImaged(keys=["image", "label"]),
                 AddChanneld(keys=["image", "label"]),
                 Orientationd(keys=["image", "label"], axcodes="RAS"),
-                ScaleIntensityRanged(
-                    keys=["image"], a_min=0, a_max=1000,
-                    b_min=0.0, b_max=1.0, clip=True,
+                AutoScaleIntensity(
+                    keys=["image"],
+                    b_min=0.0, b_max=1.0,
                 ),
                 CropForegroundd(keys=["image", "label"], source_key="image"),
                 ToTensord(keys=["image", "label"]),
@@ -141,9 +142,9 @@ def data_transforms(args):
                 LoadImaged(keys=["image"]),
                 AddChanneld(keys=["image"]),
                 Orientationd(keys=["image"], axcodes="RAS"),
-                ScaleIntensityRanged(
-                    keys=["image"], a_min=0, a_max=1000,
-                    b_min=0.0, b_max=1.0, clip=True,
+                AutoScaleIntensity(
+                    keys=["image"],
+                    b_min=0.0, b_max=1.0,
                 ),
                 CropForegroundd(keys=["image"], source_key="image"),
                 ToTensord(keys=["image"]),
@@ -159,9 +160,9 @@ def data_transforms(args):
                     1.0, 1.0, 1.2), mode=("bilinear", "nearest")),
                 # ResizeWithPadOrCropd(keys=["image", "label"], spatial_size=(256,256,128), mode=("constant")),
                 Orientationd(keys=["image", "label"], axcodes="RAS"),
-                ScaleIntensityRanged(
-                    keys=["image"], a_min=-125, a_max=275,
-                    b_min=0.0, b_max=1.0, clip=True,
+                AutoScaleIntensity(
+                    keys=["image"],
+                    b_min=0.0, b_max=1.0,
                 ),
                 CropForegroundd(keys=["image", "label"], source_key="image"),
                 RandCropByPosNegLabeld(
@@ -196,9 +197,9 @@ def data_transforms(args):
                 Spacingd(keys=["image", "label"], pixdim=(
                     1.0, 1.0, 1.2), mode=("bilinear", "nearest")),
                 Orientationd(keys=["image", "label"], axcodes="RAS"),
-                ScaleIntensityRanged(
-                    keys=["image"], a_min=-125, a_max=275,
-                    b_min=0.0, b_max=1.0, clip=True,
+                AutoScaleIntensity(
+                    keys=["image"],
+                    b_min=0.0, b_max=1.0,
                 ),
                 CropForegroundd(keys=["image", "label"], source_key="image"),
                 ToTensord(keys=["image", "label"]),
@@ -213,9 +214,9 @@ def data_transforms(args):
                     1.0, 1.0, 1.2), mode=("bilinear")),
                 # ResizeWithPadOrCropd(keys=["image"], spatial_size=(168,168,128), mode=("constant")),
                 Orientationd(keys=["image"], axcodes="RAS"),
-                ScaleIntensityRanged(
-                    keys=["image"], a_min=-125, a_max=275,
-                    b_min=0.0, b_max=1.0, clip=True,
+                AutoScaleIntensity(
+                    keys=["image"],
+                    b_min=0.0, b_max=1.0,
                 ),
                 CropForegroundd(keys=["image"], source_key="image"),
                 ToTensord(keys=["image"]),
@@ -230,9 +231,9 @@ def data_transforms(args):
                 Spacingd(keys=["image", "label"], pixdim=(
                     1.5, 1.5, 2.0), mode=("bilinear", "nearest")),
                 Orientationd(keys=["image", "label"], axcodes="RAS"),
-                ScaleIntensityRanged(
-                    keys=["image"], a_min=-125, a_max=275,
-                    b_min=0.0, b_max=1.0, clip=True,
+                AutoScaleIntensity(
+                    keys=["image"],
+                    b_min=0.0, b_max=1.0,
                 ),
                 CropForegroundd(keys=["image", "label"], source_key="image"),
                 RandCropByPosNegLabeld(
@@ -267,9 +268,9 @@ def data_transforms(args):
                 Spacingd(keys=["image", "label"], pixdim=(
                     1.5, 1.5, 2.0), mode=("bilinear", "nearest")),
                 Orientationd(keys=["image", "label"], axcodes="RAS"),
-                ScaleIntensityRanged(
-                    keys=["image"], a_min=-125, a_max=275,
-                    b_min=0.0, b_max=1.0, clip=True,
+                AutoScaleIntensity(
+                    keys=["image"],
+                    b_min=0.0, b_max=1.0,
                 ),
                 CropForegroundd(keys=["image", "label"], source_key="image"),
                 ToTensord(keys=["image", "label"]),
@@ -283,9 +284,9 @@ def data_transforms(args):
                 Spacingd(keys=["image"], pixdim=(
                     1.5, 1.5, 2.0), mode=("bilinear")),
                 Orientationd(keys=["image"], axcodes="RAS"),
-                ScaleIntensityRanged(
-                    keys=["image"], a_min=-125, a_max=275,
-                    b_min=0.0, b_max=1.0, clip=True,
+                AutoScaleIntensity(
+                    keys=["image"],
+                    b_min=0.0, b_max=1.0,
                 ),
                 CropForegroundd(keys=["image"], source_key="image"),
                 ToTensord(keys=["image"]),
