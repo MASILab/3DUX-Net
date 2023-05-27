@@ -38,7 +38,7 @@ parser.add_argument('--network', type=str, default='3DUXNET', help='Network mode
 parser.add_argument('--mode', type=str, default='train', help='Training or testing mode')
 parser.add_argument('--pretrain', default=False, help='Have pretrained weights or not')
 parser.add_argument('--pretrained_weights', default='', help='Path of pretrained weights')
-parser.add_argument('--pretrain_classes', default='', help='Number of classes output from pretrained model')
+parser.add_argument('--pretrain_classes', type=int, default='', help='Number of classes output from pretrained model')
 parser.add_argument('--batch_size', type=int, default='1', help='Batch size for subject input')
 parser.add_argument('--crop_sample', type=int, default='2', help='Number of cropped sub-volumes for each subject')
 parser.add_argument('--lr', type=float, default=0.0001, help='Learning rate for training')
