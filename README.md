@@ -2,7 +2,7 @@
 
 Official Pytorch implementation of 3D UX-Net, from the following paper:
 
-[3D UX-Net: A Large Kernel Volumetric ConvNet Modernizing Hierarchical Transformer for Medical Image Segmentation](https://arxiv.org/abs/2209.15076). Arxiv 2022 \
+[3D UX-Net: A Large Kernel Volumetric ConvNet Modernizing Hierarchical Transformer for Medical Image Segmentation](https://arxiv.org/abs/2209.15076). ICLR 2023 (Accepted, Poster) \
 Ho Hin Lee, Shunxing Bao, [Yuankai Huo](https://hrlblab.github.io/), [Bennet A. Landman](https://my.vanderbilt.edu/masi/people/bennett-landman-ph-d/) \
 Vanderbilt University \
 [[`arXiv`](https://arxiv.org/abs/2209.15076)]
@@ -49,7 +49,7 @@ We propose **3D UX-Net**, a pure volumetric convolutional network to adapt hiera
 | UNETR | 96x96x96 | 92.8M | 82.6G | 0.886 | |
 | nnFormer | 96x96x96 | 149.3M | 240.2G | 0.906 | |
 | SwinUNETR | 96x96x96 | 62.2M | 328.4G | 0.929 | |
-| 3D UX-Net | 96x96x96 | 53.0M | 639.4G | 0.938 |[Weights](https://drive.google.com/file/d/1APxKmq3MuueY4KtuKAZG3vs3vPLetLaK/view?usp=share_link)
+| 3D UX-Net | 96x96x96 | 53.0M | 639.4G | 0.936 (latest)| [Weights](https://drive.google.com/file/d/1APxKmq3MuueY4KtuKAZG3vs3vPLetLaK/view?usp=share_link)
 
 
 
@@ -84,11 +84,11 @@ This project is released under the MIT license. Please see the [LICENSE](LICENSE
 ## Citation
 If you find this repository helpful, please consider citing:
 ```
-@Article{lee20223DUX-Net,
-  author  = {Ho Hin Lee and Shunxing Bao and Yuankai Huo and Bennet A. Landman},
-  title   = {3D UX-Net: A Large Kernel Volumetric ConvNet Modernizing Hierarchical Transformer for Medical Image Segmentation]},
-  journal = {arXiv},
-  year    = {2022},
+@article{lee20223d,
+  title={3D UX-Net: A Large Kernel Volumetric ConvNet Modernizing Hierarchical Transformer for Medical Image Segmentation},
+  author={Lee, Ho Hin and Bao, Shunxing and Huo, Yuankai and Landman, Bennett A},
+  journal={arXiv preprint arXiv:2209.15076},
+  year={2022}
 }
 ```
 
