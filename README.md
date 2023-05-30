@@ -54,13 +54,13 @@ We propose **3D UX-Net**, a pure volumetric convolutional network to adapt hiera
 
 
  ### AMOS 2022 Fine-tuned Models 
- | Methods | resolution | #params | FLOPs | Mean Dice (AMOS2022) |
-|:---:|:---:|:---:|:---:| :---:|
+ | Methods | resolution | #params | FLOPs | Mean Dice (AMOS2022) | Model 
+|:---:|:---:|:---:|:---:| :---:|:---:|
 | TransBTS | 96x96x96 | 31.6M | 110.4G | 0.792 |
 | UNETR | 96x96x96 | 92.8M | 82.6G | 0.762 | 
 | nnFormer | 96x96x96 | 149.3M | 240.2G | 0.790 | 
 | SwinUNETR | 96x96x96 | 62.2M | 328.4G | 0.880 | 
-| 3D UX-Net | 96x96x96 | 53.0M | 639.4G | 0.900 (kernel=7) |
+| 3D UX-Net | 96x96x96 | 53.0M | 639.4G | 0.900 (kernel=7) | [Weights](https://drive.google.com/file/d/1G8uhjKh8392UFtGsMeolO__Lmz3GLAiG/view?usp=share_link)
 
 <!-- ✅ ⬜️  -->
 ## Training
