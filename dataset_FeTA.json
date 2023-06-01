@@ -1,0 +1,289 @@
+{
+    "description": "Infant Brain MRI for Tissue Segmentation",
+    "labels": {
+        "00": "background",
+        "01": "External Cerebrospinal Fluid",
+        "02": "Grey Matter",
+        "03": "White Matter",
+        "04": "Ventricles",
+        "05": "Cerebellum",
+        "06": "Deep Grey Matter",
+        "07": "Brainstem"
+    },
+    "licence": "hands off!",
+    "modality": {
+        "0": "MR"
+    },
+    "name": "FeTA2021BrainTissueSegmentation",
+    "numTest": 18,
+    "numTraining": 62,
+    "reference": "https://feta.grand-challenge.org/Data/",
+    "release": "0.0",
+    "tensorImageSize": "4D",
+    "test": [
+        "./imagesTs/FeTA_060.nii.gz",
+        "./imagesTs/FeTA_061.nii.gz",
+        "./imagesTs/FeTA_062.nii.gz",
+        "./imagesTs/FeTA_063.nii.gz",
+        "./imagesTs/FeTA_064.nii.gz",
+        "./imagesTs/FeTA_065.nii.gz",
+        "./imagesTs/FeTA_066.nii.gz",
+        "./imagesTs/FeTA_067.nii.gz",
+        "./imagesTs/FeTA_068.nii.gz",
+        "./imagesTs/FeTA_069.nii.gz",
+        "./imagesTs/FeTA_070.nii.gz",
+        "./imagesTs/FeTA_072.nii.gz",
+        "./imagesTs/FeTA_073.nii.gz",
+        "./imagesTs/FeTA_074.nii.gz",
+        "./imagesTs/FeTA_075.nii.gz",
+        "./imagesTs/FeTA_076.nii.gz",
+        "./imagesTs/FeTA_077.nii.gz",
+        "./imagesTs/FeTA_079.nii.gz"
+    ],
+    "training": [
+        {
+            "image": "./imagesTr/FeTA_000.nii.gz",
+            "label": "./labelsTr/FeTA_000.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_001.nii.gz",
+            "label": "./labelsTr/FeTA_001.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_002.nii.gz",
+            "label": "./labelsTr/FeTA_002.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_003.nii.gz",
+            "label": "./labelsTr/FeTA_003.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_004.nii.gz",
+            "label": "./labelsTr/FeTA_004.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_005.nii.gz",
+            "label": "./labelsTr/FeTA_005.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_006.nii.gz",
+            "label": "./labelsTr/FeTA_006.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_007.nii.gz",
+            "label": "./labelsTr/FeTA_007.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_008.nii.gz",
+            "label": "./labelsTr/FeTA_008.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_009.nii.gz",
+            "label": "./labelsTr/FeTA_009.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_011.nii.gz",
+            "label": "./labelsTr/FeTA_011.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_012.nii.gz",
+            "label": "./labelsTr/FeTA_012.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_013.nii.gz",
+            "label": "./labelsTr/FeTA_013.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_014.nii.gz",
+            "label": "./labelsTr/FeTA_014.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_015.nii.gz",
+            "label": "./labelsTr/FeTA_015.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_016.nii.gz",
+            "label": "./labelsTr/FeTA_016.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_017.nii.gz",
+            "label": "./labelsTr/FeTA_017.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_018.nii.gz",
+            "label": "./labelsTr/FeTA_018.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_019.nii.gz",
+            "label": "./labelsTr/FeTA_019.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_020.nii.gz",
+            "label": "./labelsTr/FeTA_020.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_021.nii.gz",
+            "label": "./labelsTr/FeTA_021.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_022.nii.gz",
+            "label": "./labelsTr/FeTA_022.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_023.nii.gz",
+            "label": "./labelsTr/FeTA_023.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_024.nii.gz",
+            "label": "./labelsTr/FeTA_024.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_025.nii.gz",
+            "label": "./labelsTr/FeTA_025.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_026.nii.gz",
+            "label": "./labelsTr/FeTA_026.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_027.nii.gz",
+            "label": "./labelsTr/FeTA_027.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_028.nii.gz",
+            "label": "./labelsTr/FeTA_028.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_029.nii.gz",
+            "label": "./labelsTr/FeTA_029.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_030.nii.gz",
+            "label": "./labelsTr/FeTA_030.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_031.nii.gz",
+            "label": "./labelsTr/FeTA_031.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_032.nii.gz",
+            "label": "./labelsTr/FeTA_032.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_033.nii.gz",
+            "label": "./labelsTr/FeTA_033.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_034.nii.gz",
+            "label": "./labelsTr/FeTA_034.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_035.nii.gz",
+            "label": "./labelsTr/FeTA_035.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_036.nii.gz",
+            "label": "./labelsTr/FeTA_036.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_037.nii.gz",
+            "label": "./labelsTr/FeTA_037.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_038.nii.gz",
+            "label": "./labelsTr/FeTA_038.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_039.nii.gz",
+            "label": "./labelsTr/FeTA_039.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_040.nii.gz",
+            "label": "./labelsTr/FeTA_040.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_041.nii.gz",
+            "label": "./labelsTr/FeTA_041.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_042.nii.gz",
+            "label": "./labelsTr/FeTA_042.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_043.nii.gz",
+            "label": "./labelsTr/FeTA_043.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_044.nii.gz",
+            "label": "./labelsTr/FeTA_044.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_045.nii.gz",
+            "label": "./labelsTr/FeTA_045.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_046.nii.gz",
+            "label": "./labelsTr/FeTA_046.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_047.nii.gz",
+            "label": "./labelsTr/FeTA_047.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_048.nii.gz",
+            "label": "./labelsTr/FeTA_048.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_049.nii.gz",
+            "label": "./labelsTr/FeTA_049.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_050.nii.gz",
+            "label": "./labelsTr/FeTA_050.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_051.nii.gz",
+            "label": "./labelsTr/FeTA_051.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_052.nii.gz",
+            "label": "./labelsTr/FeTA_052.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_053.nii.gz",
+            "label": "./labelsTr/FeTA_053.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_054.nii.gz",
+            "label": "./labelsTr/FeTA_054.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_055.nii.gz",
+            "label": "./labelsTr/FeTA_055.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_056.nii.gz",
+            "label": "./labelsTr/FeTA_056.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_057.nii.gz",
+            "label": "./labelsTr/FeTA_057.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_058.nii.gz",
+            "label": "./labelsTr/FeTA_058.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_059.nii.gz",
+            "label": "./labelsTr/FeTA_059.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_071.nii.gz",
+            "label": "./labelsTr/FeTA_071.nii.gz"
+        },
+        {
+            "image": "./imagesTr/FeTA_078.nii.gz",
+            "label": "./labelsTr/FeTA_078.nii.gz"
+        },
+    ]
+}
